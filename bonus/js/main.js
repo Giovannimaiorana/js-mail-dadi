@@ -1,30 +1,33 @@
 //FACCIAMO UNA LISTA USANDO ARRAY CON ELENCO EMAIL AUTORIZZATE 
 const utentiAutorizzati = ["pippo@gmail.com", "franco@gmail.com", "pluto@gmail.com", "giovanni@gmail.com", "eleonora@gmail.com" ];
 //COLLEGHIAMO HTML CON LE VARIABILI DEL DOCUMENTO JS 
-let inputEmail = document.getElementById('emailUtente').value;
+let inputEmail = document.getElementById('emailUtente');
 let inputBtn = document.getElementById('button');
 let risultatoControllo = document.getElementById('risultato');
-inputBtn.addEventListener(click, 
+inputBtn.addEventListener('click' , 
     function(){
-         console.log(inputEmail.value);
+         let autorizzato = false;
+         for ( let i=0; i <utentiAutorizzati.length; i++){
+            if(inputEmail.value == utentiAutorizzati[i]){
+                autorizzato = true;
+            }     
+            console.log(inputEmail.value);
+        }
+        if(autorizzato){
+            alert("Accesso Autorizzato la sua e-mail compare nel nostro database ");
+        } else {
+            alert('accesso non autorizzato');
+        }
     }
-    
-    );
-// CONTROLLIAMO SE L'EMAIL INSERITA DALL'UTENTE è PRESENTE NELLA LISTA DEGLI UTENTI PRECEDENTEMENTE DEFINITA NELL'ARREY
-let autorizzato = false;
 
-for ( let i=0; i <utentiAutorizzati.length; i++){
-    if(inputEmail === utentiAutorizzati[i]){
-        autorizzato = true;
-    }
-}
+);
+
+    
+
+
 
 // STAMPIAMO IL MESSAGGIO SIA NEL CASO IN CUI L'EMAIL SIA PRESENTE TRA LA LISTA SIA NEL CASO CONTRARIO
-if(autorizzato){
-    console.log("Accesso Autorizzato la sua e-mail compare nel nostro database ");
-} else {
-    console.log(" Siamo spiacenti ma la sua email non compare nei nostri database");
-}
+
 
 //FINE ESERCIZIO EMAIL
 
