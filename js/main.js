@@ -1,4 +1,4 @@
-//FACCIAMO UNA LISTA USANDO ARRAY CON ELENCO EMAIL AUTORIZZATE 
+/*/FACCIAMO UNA LISTA USANDO ARRAY CON ELENCO EMAIL AUTORIZZATE 
 const utentiAutorizzati = ["pippo@gmail.com", "franco@gmail.com", "pluto@gmail.com", "giovanni@gmail.com", "eleonora@gmail.com" ];
 // CREIAMO COSTANTE CHE CHIEDA ALL'UTENTE DI INSERIRE LA PROPRIA EMAIL
 const emailUtente= prompt("Inserisci la tua email");
@@ -18,3 +18,24 @@ if(autorizzato){
     console.log(" Siamo spiacenti ma la sua email non compare nei nostri database");
 }
 
+*///FINE ESERCIZIO EMAIL
+
+
+
+
+// ESERCIZIO DADI
+//GENERIAMO UN NUMERO RANDOM PER IL GIOCATORE 1 CHE VADA DA 1 A 6
+const numeroPlayer1 = Math.floor(Math.random() * 6) + 1; 
+console.log(numeroPlayer1);
+//GENERIAMO UN NUMERO RANDOM PER IL GIOCATORE 2 ANCH'ESSO CON UN VALORE DA 1 A 6
+const numeroPLayer2 = Math.floor(Math.random() * 6) + 1;
+console.log(numeroPLayer2);
+//CONFRONTIAMO I DUE NUMERI, DICENDO CHE IL NUMERO PIù ALTO VINCE, DUNQUE IL NUMEOR PIù BASSO PERDER E REGOLANDO COSA SIA NECESSARIO FARE IN CASO DI PAREGGIO
+if ( numeroPlayer1 > numeroPLayer2){
+    console.log("Player1 vince");
+}else if ( numeroPLayer2 > numeroPlayer1){
+    console.log("Player2 vince");
+}else 
+console.log("Pareggio, Tirare i dati per continuare");
+
+    
